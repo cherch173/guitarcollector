@@ -1,3 +1,6 @@
+<!-- Step 9.2 load STATIC -->
+{% load static %}
+
 <!-- Step 8.3 Copy in Boilerplate for your BASE -->
 
 <!DOCTYPE html>
@@ -17,6 +20,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <!-- Step 9.4 link your STATIC CSS to the BASE HTML-->
+    <link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/style.css' %}"
+/>
+
   </head>
   <body>
     <header class="navbar-fixed">
