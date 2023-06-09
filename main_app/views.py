@@ -4,10 +4,13 @@ from django.shortcuts import render
 
 guitars = [
     {'name': 'Les Paul', 'brand': 'Gibson', 'description': 'The GOAT', 'date': '1952', 'played': 'Duane Allman, Adam Jones, Jimmy Page'},
-    {'name': 'Telecaster', 'brand': 'Fender', 'description': 'snarling and classic. Prince''s go-to which says it all', 'date': '1951', 'played': 'Prince, Curtis Mayfield, Joe Strummer, Bruce Springsteen, Keith Richards'},
-    {'name': 'ES-355', 'brand': 'Gibson', 'description': 'the most iconic of all semi-hollowbody double cutaways. Versatile enough to fit any genre (and we do mean any genre).', 'date': '1958', 'played': 'B.B. King, Paul Westerberg, Leo Nocentelli, Gary Clark Jr.'},
+    {'name': 'Telecaster', 'brand': 'Fender', 'description': 'Snarling, visceral, bright and an absolute classic. Prince''s go-to which says it all', 'date': '1951', 'played': 'Prince, Curtis Mayfield, Joe Strummer, Bruce Springsteen, Keith Richards, J. Spaceman, Jonny Greenwood'},
+    {'name': 'ES-355', 'brand': 'Gibson', 'description': 'The most iconic of all semi-hollowbody double cutaways. Versatile enough to fit any genre (and we do mean any genre).', 'date': '1958', 'played': 'B.B. King, Paul Westerberg, Leo Nocentelli, Gary Clark Jr.'},
     {'name': 'Stratocaster', 'brand': 'Fender', 'description': "Music's most famous instrument. If you''ve heard a song, chances are you''ve heard a Strat. ", 'date': '1954', 'played': 'David Gilmour, Jimi Hendrix, George Harrison, Eddie Hazel, Buddy Guy' },
     {'name': 'SG', 'brand': 'Gibson', 'description': "Lightweight, lightning-faast and absolutely legendary: this double cutaway. Sings especially well with P-90 pickups.", 'date': '1961', 'played': 'Derek Trucks, Tony Iommi, Carlos Santana, Jeff Tweedy'},
+    {'name': '360', 'brand': 'Rickenbacker', 'description': 'Arguably the sound of the summer of love. Iconic, psychedlic, and truly an individual.', 'date': '1958', 'played': 'Tom Petty, John Lennon, Martin Gore'},
+    {'name': 'Jazzmaster', 'brand': 'Fender', 'description': 'The Alt Queen. A one-of-a-kind sparkle laced with beautiful enveloping lows not normally found in a Fender, the Jazzmaster has been the cutting edge of every indie movement.', 'date': '', 'played': 'Thom Yorke, Robert Smith, Thurston Moore, Tom Verlaine, Lee Ronaldo, Elvis Costello'},
+    {'name': '', 'brand': '', 'description': '', 'date': '', 'played': ''},
 ]
 
 # Create your views here.
