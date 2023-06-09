@@ -10,3 +10,7 @@ path('', views.home, name='home'),
 # Step 8.1 add PATH to ABOUT
 path('about/', views.about, name='about')
 ]
+
+# Step 8.2 touch main_app/templates/base.html
+# to CREATE your BASE html to ensure
+# your TEMPLATE INHERITANCE WORKS
