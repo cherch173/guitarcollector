@@ -9,7 +9,7 @@ guitars = [
     {'name': 'Stratocaster', 'brand': 'Fender', 'description': "Music's most famous instrument. If you''ve heard a song, chances are you''ve heard a Strat. ", 'date': '1954', 'played': 'David Gilmour, Jimi Hendrix, George Harrison, Eddie Hazel, Buddy Guy' },
     {'name': 'SG', 'brand': 'Gibson', 'description': "Lightweight, lightning-faast and absolutely legendary: this double cutaway. Sings especially well with P-90 pickups.", 'date': '1961', 'played': 'Derek Trucks, Tony Iommi, Carlos Santana, Jeff Tweedy'},
     {'name': '360', 'brand': 'Rickenbacker', 'description': 'Arguably the sound of the summer of love. Iconic, psychedlic, and truly an individual.', 'date': '1958', 'played': 'Tom Petty, John Lennon, Martin Gore'},
-    {'name': 'Jazzmaster', 'brand': 'Fender', 'description': 'The Alt Queen. A one-of-a-kind sparkle laced with beautiful enveloping lows not normally found in a Fender, the Jazzmaster has been the cutting edge of every indie movement.', 'date': '', 'played': 'Thom Yorke, Robert Smith, Thurston Moore, Tom Verlaine, Lee Ronaldo, Elvis Costello'},
+    {'name': 'Jazzmaster', 'brand': 'Fender', 'description': 'The Alt Queen. One-of-a-kind shimmer laced with beautiful enveloping lows not normally found in a Fender, the Jazzmaster has been the cutting edge of every indie movement.', 'date': '1958', 'played': 'Thom Yorke, Robert Smith, Thurston Moore, Tom Verlaine, Lee Ronaldo, Elvis Costello'},
     {'name': '', 'brand': '', 'description': '', 'date': '', 'played': ''},
 ]
 
