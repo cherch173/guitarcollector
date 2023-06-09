@@ -3,11 +3,11 @@ from django.shortcuts import render
 #Step 10.3 ADD your guitars for your ALL, my guy
 
 guitars = [
-    {'name': 'Les Paul', 'brand': 'Gibson', 'description': 'The GOAT', 'Date Manufactured': '1952'},
-    {'name': 'Telecaster', 'brand': 'Fender', 'description': 'snarling and classic. Prince''s go-to which says it all', 'Date Manufactured': '1951'},
-    {'name': 'ES-355', 'brand': 'Gibson', 'description': 'the most iconic of all semi-hollowbody double cutaways. Versatile enough to fit the style of BB King, Leo Nocentelli and Paul Westerberg.', 'Date Manufactured': '1958'},
-    {'name': 'SG', 'brand': 'Gibson', 'description': 'Lengedary, lightweight, lightning-faast double cutaway. Sings especially well with P-90 pickups.', 'Date Manufactured': '1961'},
-    {'name': 'Stratocaster', 'brand': 'Fender', 'description': 'music''s most famous instrument. If you''ve heard a song, chances are you''ve heard a Strat. ', 'Date Manufactured': '1954'}
+    {'name': 'Les Paul', 'brand': 'Gibson', 'description': 'The GOAT', 'date': '1952', 'played': 'Duane Allman, Adam Jones, Jimmy Page'},
+    {'name': 'Telecaster', 'brand': 'Fender', 'description': 'snarling and classic. Prince''s go-to which says it all', 'date': '1951', 'played': 'Prince, Curtis Mayfield, Joe Strummer, Bruce Springsteen, Keith Richards'},
+    {'name': 'ES-355', 'brand': 'Gibson', 'description': 'the most iconic of all semi-hollowbody double cutaways. Versatile enough to fit any genre (and we do mean any genre).', 'date': '1958', 'played': 'B.B. King, Paul Westerberg, Leo Nocentelli, Gary Clark Jr.'},
+    {'name': 'Stratocaster', 'brand': 'Fender', 'description': "Music's most famous instrument. If you''ve heard a song, chances are you''ve heard a Strat. ", 'date': '1954', 'played': 'David Gilmour, Jimi Hendrix, George Harrison, Eddie Hazel, Buddy Guy' },
+    {'name': 'SG', 'brand': 'Gibson', 'description': "Lightweight, lightning-faast and absolutely legendary: this double cutaway. Sings especially well with P-90 pickups.", 'date': '1961', 'played': 'Derek Trucks, Tony Iommi, Carlos Santana, Jeff Tweedy'},
 ]
 
 # Create your views here.
