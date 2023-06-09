@@ -8,7 +8,9 @@ urlpatterns = [
 # Step 5.3 add PATH to URLPATTERNS
 path('', views.home, name='home'),
 # Step 8.1 add PATH to ABOUT
-path('about/', views.about, name='about')
+path('about/', views.about, name='about'),
+# Step 10.1 add PATH for ALL
+path('guitars/', views.guitars_index, name='index')
 ]
 
 # Step 8.2 touch main_app/templates/base.html
