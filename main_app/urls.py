@@ -7,4 +7,6 @@ from . import views
 urlpatterns = [
 # Step 5.3 add PATH to URLPATTERNS
 path('', views.home, name='home'),
+# Step 8.1 add PATH to ABOUT
+path('about/', views.about, name='about')
 ]

@@ -14,3 +14,7 @@ def home(request):
 # (will always be html in Django)
 
 # Step 7.1 create a home.html file in the GUI and go there
+
+# Step 8.1 define ABOUT function
+def about(request):
+    return render(request, 'about.html')
