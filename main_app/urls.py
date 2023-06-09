@@ -1,4 +1,4 @@
-# Step 5.2 Add the Routing Boilerplate to main_app/urls
+# Step 5.2 ADD the ROUTING Boilerplate to main_app/urls
 # to get your server back
 
 from django.urls import path
