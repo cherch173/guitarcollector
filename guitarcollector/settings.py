@@ -30,7 +30,13 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# Step 3.1 (create a gitignore in the root directory where the git is)
+
+# Step 3.2 CREATE MAIN_APP
+# enter python3 manage.py startapp main_app in zsh 
+
 INSTALLED_APPS = [
+    # Step 3.3 Add main_app to INSTALLED APPS
     'main_app',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+# Step 3.5 test the server at localhost:8000
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,10 +84,15 @@ WSGI_APPLICATION = 'guitarcollector.wsgi.application'
 
 DATABASES = {
     'default': {
+        # Step 3.7 CHANGE end of this url to postgresql
         'ENGINE': 'django.db.backends.postgresql',
+        # Step 3.6 CHANGE name to your DBs name
         'NAME': 'guitarcollector',
     }
 }
+
+# Step 3.8 MIGRATE pending migrations in zsh
+# python3 manage.py migrate
 
 
 # Password validation

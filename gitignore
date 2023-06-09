@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io
 
+# STEP 3.4 Add everything copied below to gitignore
+
 ### OSX ###
 .DS_Store
 .AppleDouble
