@@ -35,21 +35,23 @@ class Guitar(models.Model):
 # this will load a >>> prompt meaning ORM is active
 
 # Step 7.2 (C - CREATE) IMPORT model to DB
-# >>> from main_app.models import Guitars
+# >>> from main_app.models import Guitar
 # test by pressing enter
 
 # Step 7.3 RETRIEVE all OBJECTS using all()
-# >>> Guitars.objects.all()
+# >>> Guitar.objects.all()
 # should return a QuerySet
 
 # Step 7.4 CREATING a NEW OBJECT 
 # all data must be provided as a KWARG
-# >>> c = Guitars(
+# >>> g = Guitar(
 # name="Esquire Telecaster", 
 # brand='Fender',
-# description': 'Snarling, visceral, bright and an absolute classic. Prince''s go-to which says it all', 
-# 'date': '1951', 
-# 'played': 'Prince, Curtis Mayfield, Joe Strummer, Bruce Springsteen, Keith Richards, J. Spaceman, Jonny Greenwood'
+# description='Snarling, visceral, bright and an absolute classic. Prince''s go-to which says it all', 
+# date='1951', 
+# played='Prince, Curtis Mayfield, Joe Strummer, Bruce Springsteen, Keith Richards, J. Spaceman, Jonny Greenwood',
+# for_sale=True,
+# price=22450.00
 # )
 
 # confirm by entering g in python shell
@@ -61,7 +63,7 @@ class Guitar(models.Model):
 # >>> g.id 
 
 # Step 7.6 CONFIRM the NEW OBJECT is in DB
-# >>> Guitars.objects.all()
+# >>> Guitar.objects.all()
 # should return a QuerySet with an object
 
 # Step 7.7 ADD a STR METHOD to MODEL
