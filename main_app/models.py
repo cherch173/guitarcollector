@@ -1,13 +1,14 @@
 from django.db import models
 
 # Create your models here.
-class guitar(models.Model):
+class Guitar(models.Model):
     # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
     # use CharField for a small text input
+    image = models.ImageField(max_width=300)
     name = models.CharField(max_length=50)
     brand = models.CharField(max_length=50)
-    description = models.TextField(max_length=371)
     date = models.IntegerField()
+    description = models.TextField(max_length=371)
     played = models.TextField(max_length=371)
     for_sale = models.BooleanField(default=False)
     price = models.DecimalField(default=0.00)
