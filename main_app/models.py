@@ -77,7 +77,7 @@ def __str__(self):
 # use exit() or crtl+D to leave the shell
 # relaunch the shell using python3 manage.py shell
 # RE-IMPORT your MODEL
-# from main_app.models import Guitars
+# from main_app.models import Guitar
 
 
 # Step 7.9 (U - UPDATE) UPDATE an OBJECT
