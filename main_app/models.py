@@ -70,8 +70,8 @@ class Guitar(models.Model):
 # changing this INSTANCE METHOD does not impact the DATABASE,
 # therefore no makemigrations are necessary
 
-# def __str__(self):
-#     return f'{self.name} ({self.id})'
+def __str__(self):
+    return f'{self.name} ({self.id})'
 
 # Step 7.8 RELOAD the SHELL
 # use exit() or crtl+D to leave the shell
