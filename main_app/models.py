@@ -4,7 +4,7 @@ from django.db import models
 class Guitar(models.Model):
     # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
     # use CharField for a small text input
-    # image = models.ImageField(width_field=300)
+    # image = models.ImageField(upload_to='uploads/% Y/% m/% d', max_width=300)
     name = models.CharField(max_length=50)
     brand = models.CharField(max_length=50)
     date = models.IntegerField()
