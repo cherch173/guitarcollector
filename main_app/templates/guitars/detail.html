@@ -1,17 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Guitar Details</h1>
+<h3>
+    <strong>
+        {{ guitar.brand }}
+    </strong>
+    <i>
+        {{ guitar.name }}
+    </i>
+
+
+</h3>
 
 <div class="card">
   <div class="card-content">
-    <span class="card-title">
-        <p>
-            <strong>
-                {{ guitar.name }}
-            </strong>
-        </p>
-    </span>
+    <p>
+        Name -- 
+        <strong>
+            {{ guitar.name }}
+        </strong>
+    </p>
     <p>
         Brand -- 
         <strong>
@@ -43,5 +51,8 @@
     </p>
   </div>
 </div>
+<br>
+<button onclick="window.location.href='../';">BACK</button>
+
 
 {% endblock %}
