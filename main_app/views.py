@@ -22,8 +22,15 @@ def about(request):
     return render(request, 'about.html')
 
 # Step 10.2 define the ALL function
-def guitars_index(request):
-    guitars = Guitar.objects.all() 
+def guitars_index(request, guitar_id):
+    guitar = Guitar.objects.get(id=guitar_id)
     return render(request, 'guitars/index.html', {
-        'guitars': guitars
+        'guitar': guitar
+    })
+
+# DEFINE the DETAILS Function
+def guitars_detail(request, guitar_id):
+    guitar = Guitar.objects.get(id=guitar_id)
+    return render(request, 'guitars/detail.html', {
+        'guitar': guitar
     })
