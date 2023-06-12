@@ -16,3 +16,5 @@ path('guitars/', views.guitars_index, name='index')
 # Step 8.2 touch main_app/templates/base.html
 # to CREATE your BASE html to ensure
 # your TEMPLATE INHERITANCE WORKS
+
+ 

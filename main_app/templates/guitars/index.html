@@ -4,16 +4,51 @@
 
 {% for guitar in guitars %}
 <div class="card">
-  <div class="card-content">
-    <!-- <p>{{ guitar.image }}</p> -->
-    <span class="card-title">{{ guitar.name }}</span>
-    <p>Brand: {{ guitar.brand }}</p>
-    <p>Description: {{ guitar.description }}</p>
-    <p>Date Manufactured: {{ guitar.date }}</p>
-    <p>Played By: {{ guitar.played }}</p>
-    <br>
-    <p>For Sale?: {{ guitar.for_sale }}</p>
-    <p>Asking Price: {{ guitar.price }}</p>
-  </div>
+  <a href="/guitars/{{ guitar.id}}">
+    <div class="card-content">
+      <!-- <p>{{ guitar.image }}</p> -->
+      <span class="card-title">{{ guitar.name }}</span>
+    </a>
+      <p>
+        <strong>
+          Brand --  
+        </strong>
+        {{ guitar.brand }}
+      </p>
+      <p>
+        <strong>
+          Date Manufactured -- 
+        </strong>
+        {{ guitar.date }}
+      </p>
+      <p>
+        <strong>
+          Played By: 
+        </strong>
+        {{ guitar.played }}
+      </p>
+      <p>
+        <strong>
+          Description: 
+        </strong>
+        <i>
+        {{ guitar.description }}
+      </i> 
+      </p>
+      <br>
+      <p>
+        <strong>
+          For Sale? -- 
+        </strong>
+        {{ guitar.for_sale }}
+      </p>
+      <p>
+        <strong>
+          Asking Price --
+        </strong>
+        {{ guitar.price }}
+      </p>
+    </div>
 </div>
 {% endfor %} {% endblock %}
+
