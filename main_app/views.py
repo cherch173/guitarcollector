@@ -29,5 +29,8 @@ def guitars_index(request):
     })
 
 # DEFINE the DETAILS Function
-def guitars_detail():
-    return
+def guitars_detail(request, guitar_id):
+    guitar = Guitar.objects.get(id=guitar_id)
+    return render(request, 'guitars/detail.html', {
+        'guitar': guitar
+    })
