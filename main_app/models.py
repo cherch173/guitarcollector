@@ -4,14 +4,14 @@ from django.db import models
 class Guitar(models.Model):
     # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
     # use CharField for a small text input
-    image = models.ImageField(max_width=300)
+    # image = models.ImageField(width_field=300)
     name = models.CharField(max_length=50)
     brand = models.CharField(max_length=50)
     date = models.IntegerField()
     description = models.TextField(max_length=371)
     played = models.TextField(max_length=371)
     for_sale = models.BooleanField(default=False)
-    price = models.DecimalField(default=0.00)
+    price = models.DecimalField(default=0000.00, decimal_places=2, max_digits=10)
 
 # VID 2 (Models) Step 6.0 MIGRATIONS
 # make MIGRATIONS to update the database with your new MODEL
