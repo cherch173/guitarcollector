@@ -1,7 +1,16 @@
 from django.db import models
 
 # Create your models here.
-
+class guitar(models.Model):
+    # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
+    # use CharField for a small text input
+    name = models.CharField(max_length=50)
+    brand = models.CharField(max_length=50)
+    description = models.TextField(max_length=371)
+    date = models.IntegerField()
+    played = models.TextField(max_length=371)
+    for_sale = models.BooleanField(default=False)
+    price = models.DecimalField(default=0.00)
 
 # VID 2 (Models) Step 6.0 MIGRATIONS
 # make MIGRATIONS to update the database with your new MODEL
