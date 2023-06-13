@@ -35,15 +35,15 @@
           <ul>
             <li>
               <a
-                href="/"
+                href="{% url 'home' %}"
                 class="left brand-logo"
                 >&nbsp;&nbsp;Guitar Collector</a
               >
             </li>
           </ul>
           <ul class="right">
-            <li><a href="/about">About</a></li>
-            <li><a href="/guitars">All My Guitars</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'index' %}">All My Guitars</a></li>
             <!-- Step 10.0 Add a new Hyperlink for ALL GUITARS -->
           </ul>
         </div>
@@ -56,7 +56,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="right">All Rights Reserved, &copy; 2023 Guitar Collector &nbsp;</div>
+      <div class="right">All Rights Reserved, &copy; {% now 'Y' %} Guitar Collector &nbsp;</div>
     </footer>
     
   </body>
