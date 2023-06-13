@@ -12,6 +12,12 @@ main {
     flex: 1 0 auto;
 }
 
+button:hover {
+    cursor: pointer;
+    transform: scale(105%);
+    transition: 173ms;
+}
+
 footer.page-footer {
     padding-top: 0;
     text-align: right;
