@@ -126,3 +126,4 @@ def __str__(self):
 # Define REVERSE Redirect using GET ABSOLUTE URL
 def get_absolute_url(self):
     return reverse('detail', kwargs={'guitar_id': self.id})
+

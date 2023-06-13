@@ -1,6 +1,7 @@
 from django.shortcuts import render
 # LAB pt 3 (CBVs) Step 1.4.1 IMPORT CreateView
-from django.views.generic.edit import CreateView
+# Step 2.3 IMPORT UpdateView & DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # LAB pt 2 (Models) Step 8.0 IMPORT the CAT MODEL
 from .models import Guitar
 
@@ -37,8 +38,19 @@ def guitars_detail(request, guitar_id):
         'guitar': guitar
     })
 
-# LAB pt 3 (CBVs) - 1.4.2 CREATE the CLASS for CREATE(New)
+# LAB pt 3 (CBVs) - Part 1.4.2 CREATE the CLASS for CREATE(New)
 class GuitarCreate(CreateView):
     model = Guitar
     fields = '__all__'
+    success_url = '/guitars'
+
+# Part 2.4 - CREATE the CLASSES for UPDATE & DELETE
+
+class GuitarUpdate(UpdateView):
+    model = Guitar
+    fields = '__all__'
+    success_url = '/guitars'
+
+class GuitarDelete(DeleteView):
+    model = Guitar
     success_url = '/guitars'
