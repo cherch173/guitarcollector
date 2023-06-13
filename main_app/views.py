@@ -1,5 +1,7 @@
 from django.shortcuts import render
-# (Models) Step 8.0 IMPORT the CAT MODEL
+# LAB pt 3 (CBVs) Step 1.4.1 IMPORT CreateView
+from django.views.generic.edit import CreateView
+# LAB pt 2 (Models) Step 8.0 IMPORT the CAT MODEL
 from .models import Guitar
 
 # Create your views here.
@@ -34,3 +36,8 @@ def guitars_detail(request, guitar_id):
     return render(request, 'guitars/detail.html', {
         'guitar': guitar
     })
+
+# LAB pt 3 (CBVs) - 1.4.2 CREATE the CLASS for CREATE(New)
+class GuitarCreate(CreateView):
+    model = Guitar
+    fields = '__all__'
