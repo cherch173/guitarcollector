@@ -2,12 +2,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>
-    Add a
-    <span class="teal-text">
-        Guitar
-    </span>
-</h1>
+<!-- Step 2.6 ADD if/else to FORM html to SWITCH between ADD & EDIT -->
+{% if object%}
+    <h1>Edit 
+        <i>
+            {{object.brand}}
+        </i>
+        <span class="teal-text">{{object.name}}</span>
+    </h1>
+{% else %}
+    <h1>
+        Add a
+        <span class="teal-text">
+            Guitar
+        </span>
+    </h1>
+{% endif %}
 <form action="" method="POST">
     {% csrf_token %}
     <table>
