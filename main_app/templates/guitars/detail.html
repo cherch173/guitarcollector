@@ -65,6 +65,11 @@
         </strong>
     </p>
   </div>
+  <div class="card-action">
+    <a href="{% url 'guitars_update' guitar.id %}">Edit</a>
+    <a href="{% url 'guitars_delete' guitar.id %}">Delete</a>
+  </div>
+
 </div>
 <br>
 <button onclick="window.location.href='../';">BACK</button>
