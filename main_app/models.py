@@ -1,6 +1,6 @@
 from django.db import models
 
-# Lab pt 3 (CBVs) Part 5.7 Import Reverse
+# Lab pt 3 (CBVs) Part 1.6 Import Reverse
 from django.urls import reverse
 
 # Create your models here.
@@ -122,7 +122,7 @@ def __str__(self):
 # it can be INDEXED too if you need
 # >>> Guitars.objects.order_by('-date')[0]
 
-#LAB pt 3 (CBVs) - Part 5.6 
+#LAB pt 3 (CBVs) - Part 1.5 
 # Define REVERSE Redirect using GET ABSOLUTE URL
 def get_absolute_url(self):
     return reverse('detail', kwargs={'guitar_id': self.id})
