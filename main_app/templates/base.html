@@ -37,12 +37,14 @@
               <a
                 href="{% url 'home' %}"
                 class="left brand-logo"
-                >&nbsp;&nbsp;Guitar Collector</a
-              >
+                >&nbsp;&nbsp;
+                Guitar Collector</a>
             </li>
           </ul>
           <ul class="right">
             <li><a href="{% url 'about' %}">About</a></li>
+            <!-- Lab pt 3 - Step 1.2 ADD UI for CREATE (New) -->
+            <li><a href="{% url 'guitars_create' %}">Add a Guitar</a></li>
             <li><a href="{% url 'index' %}">All My Guitars</a></li>
             <!-- Step 10.0 Add a new Hyperlink for ALL GUITARS -->
           </ul>
@@ -56,7 +58,7 @@
     </main>
 
     <footer class="page-footer">
-      <div class="right">All Rights Reserved, &copy; {% now 'Y' %} Guitar Collector &nbsp;</div>
+      <div class="right">All Rights Reserved, &copy; {% now 'Y' %} Cherch &nbsp;</div>
     </footer>
     
   </body>
