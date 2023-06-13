@@ -1,5 +1,8 @@
 from django.db import models
 
+# Lab pt 3 (CBVs) Part 5.7 Import Reverse
+from django.urls import reverse
+
 # Create your models here.
 class Guitar(models.Model):
     # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
@@ -10,7 +13,7 @@ class Guitar(models.Model):
     date = models.IntegerField()
     description = models.TextField(max_length=371)
     played = models.TextField(max_length=371)
-    for_sale = models.BooleanField(default=False)
+    for_sale = models.BooleanField(default=True)
     price = models.DecimalField(default=0000.00, decimal_places=2, max_digits=10)
 
 # VID 2 (Models) Step 6.0 MIGRATIONS
@@ -118,3 +121,8 @@ def __str__(self):
 
 # it can be INDEXED too if you need
 # >>> Guitars.objects.order_by('-date')[0]
+
+#LAB pt 3 (CBVs) - Part 5.6 
+# Define REVERSE Redirect using GET ABSOLUTE URL
+def get_absolute_url(self):
+    return reverse('detail', kwargs={'guitar_id': self.id})
