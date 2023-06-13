@@ -12,6 +12,10 @@ main {
     flex: 1 0 auto;
 }
 
+.nav {
+    background-color: teal !important;
+}
+
 button:hover {
     cursor: pointer;
     transform: scale(105%);
@@ -19,6 +23,7 @@ button:hover {
 }
 
 footer.page-footer {
+    background-color: teal !important;
     padding-top: 0;
     text-align: right;
 }

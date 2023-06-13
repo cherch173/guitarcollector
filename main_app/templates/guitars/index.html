@@ -1,6 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Hall of Fame</h1>
+<h1>Hall of 
+  <span class="teal-text">
+    Fame
+  </span>
+</h1>
 
 {% for guitar in guitars %}
 <div class="card">
@@ -13,13 +17,17 @@
         <strong>
           Brand --  
         </strong>
-        {{ guitar.brand }}
+        <span class="teal-text">
+          {{ guitar.brand }}
+        </span>
       </p>
       <p>
         <strong>
           Date Manufactured -- 
         </strong>
-        {{ guitar.date }}
+        <span class="teal-text">
+          {{ guitar.date }}
+        </span>
       </p>
       <p>
         <strong>
@@ -46,7 +54,9 @@
         <strong>
           Asking Price --
         </strong>
-        ${{ guitar.price }}
+        <span class="teal-text">
+          ${{ guitar.price }}
+        </span>
       </p>
     </div>
 </div>
