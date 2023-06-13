@@ -13,7 +13,9 @@ path('about/', views.about, name='about'),
 path('guitars/', views.guitars_index, name='index'),
 # (Models) Part 2 - Step 10.2
 # DEFINE ROUTE for DETAILS PAGE (Show functionality)
-path('guitars/<int:guitar_id>/', views.guitars_detail, name='detail')
+path('guitars/<int:guitar_id>/', views.guitars_detail, name='detail'),
+# Lab Pt 3 (CBVs) - Step 1.3 Define ROUTE for CREATE (New)
+path('guitars/create/', views.GuitarCreate.as_view(), name='guitars_create'),
 ]
 
 # Step 8.2 touch main_app/templates/base.html
