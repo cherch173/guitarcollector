@@ -127,3 +127,6 @@ class Guitar(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'guitar_id': self.id})
 
+class Using(models.Model):
+    date = models.DateField()
+    use = models.CharField(max_length=1)
