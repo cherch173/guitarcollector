@@ -73,8 +73,8 @@ class Guitar(models.Model):
 # changing this INSTANCE METHOD does not impact the DATABASE,
 # therefore no makemigrations are necessary
 
-def __str__(self):
-    return f'{self.name} ({self.id})'
+    def __str__(self):
+        return f'{self.name} ({self.id})'
 
 # Step 7.8 RELOAD the SHELL
 # use exit() or crtl+D to leave the shell
@@ -124,6 +124,6 @@ def __str__(self):
 
 #LAB pt 3 (CBVs) - Part 1.5 
 # Define REVERSE Redirect using GET ABSOLUTE URL
-def get_absolute_url(self):
-    return reverse('detail', kwargs={'guitar_id': self.id})
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'guitar_id': self.id})
 
