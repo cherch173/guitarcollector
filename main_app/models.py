@@ -3,6 +3,13 @@ from django.db import models
 # Lab pt 3 (CBVs) Part 1.6 Import Reverse
 from django.urls import reverse
 
+# LAB pt 4 (OtM) Add USES Tuple in Tuple
+USES = (
+    ('R', 'Recording'),
+    ('T', 'Touring'),
+    ('S', 'Storage'),
+)
+
 # Create your models here.
 class Guitar(models.Model):
     # Step 5.1 add FIELDS (charField lol Garfield, cat puns)
@@ -122,11 +129,22 @@ class Guitar(models.Model):
 # it can be INDEXED too if you need
 # >>> Guitars.objects.order_by('-date')[0]
 
-#LAB pt 3 (CBVs) - Part 1.5 
+# LAB pt 3 (CBVs) - Part 1.5 
 # Define REVERSE Redirect using GET ABSOLUTE URL
     def get_absolute_url(self):
         return reverse('detail', kwargs={'guitar_id': self.id})
 
+# LAB pt 4 (OtM) Part 1.2 Add USING CLASS
 class Using(models.Model):
     date = models.DateField()
-    use = models.CharField(max_length=1)
+    use = models.CharField(max_length=1,
+        choices=USES,
+        default=USES[0][0]
+    )
+    guitar = models.ForeignKey(
+        Guitar,
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return f"{self.get_use_display()} on {self.date}"
