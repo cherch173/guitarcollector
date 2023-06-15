@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # LAB pt 2 (Models) Step 8.0 IMPORT the CAT MODEL
 from .models import Guitar
+from .forms import UsingForm
 
 # Create your views here.
 
@@ -34,8 +35,10 @@ def guitars_index(request):
 # DEFINE the DETAILS Function
 def guitars_detail(request, guitar_id):
     guitar = Guitar.objects.get(id=guitar_id)
+    using_form = UsingForm()
     return render(request, 'guitars/detail.html', {
-        'guitar': guitar
+        'guitar': guitar,
+        'using_form': using_form
     })
 
 # LAB pt 3 (CBVs) - Part 1.4.2 CREATE the CLASS for CREATE(New)

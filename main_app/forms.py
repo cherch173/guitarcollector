@@ -4,4 +4,4 @@ from .models import Using
 class UsingForm(ModelForm):
     class Meta:
         model = Using
-        fields = '__all__'
+        fields = ['date', 'use']

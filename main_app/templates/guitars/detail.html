@@ -71,6 +71,13 @@
     <a class="teal-text" href="{% url 'guitars_delete' guitar.id %}">Delete</a>
   </div>
   <div class="col s6">
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{ using_form.as_p }}
+        <input type="submit" class="btn" value="Add Feeding" />
+    </form>
+    <br>
     <table class="teal lighten-3 striped">
         <thead>
             <tr>
@@ -95,5 +102,17 @@
 <button onclick="window.location.href='../';">BACK</button>
 <br>
 <br>
+
+<script>
+    const dateEl = document.getElementById('id_date');
+    M.Datepicker.init(dateEl, {
+        format: 'yyyy-mm-dd',
+        defaultDate: new Date(),
+        setDefaultDate: true,
+        autoClose: true
+    });
+    const selectEl = document.getElementById('id_use');
+    M.FormSelect.init(selectEl);
+</script>
 
 {% endblock %}
