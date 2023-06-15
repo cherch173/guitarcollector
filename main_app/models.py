@@ -136,7 +136,7 @@ class Guitar(models.Model):
 
 # LAB pt 4 (OtM) Part 1.2 Add USING CLASS
 class Using(models.Model):
-    date = models.DateField('Date In Use')
+    date = models.DateField()
     use = models.CharField(max_length=1,
         choices=USES,
         default=USES[0][0]

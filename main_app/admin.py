@@ -1,9 +1,7 @@
 from django.contrib import admin
 
 # Import your models here
-from .models import Guitar, Using
+from .models import Guitar
 
 # Register your models here.
 admin.site.register(Guitar)
-# Lab pt 4 register USING Class
-admin.site.register(Using)
