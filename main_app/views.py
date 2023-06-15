@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 # LAB pt 3 (CBVs) Step 1.4.1 IMPORT CreateView
 # Step 2.3 IMPORT UpdateView & DeleteView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -41,6 +41,14 @@ def guitars_detail(request, guitar_id):
         'using_form': using_form
     })
 
+def add_use(request, guitar_id):
+    form = UsingForm(request.POST)
+    if form.is_valid():
+        new_using = form.save(commit=False)
+        new_using.guitar_id = guitar_id
+        new_using.save()
+    return redirect('detail', guitar_id=guitar_id)
+
 # LAB pt 3 (CBVs) - Part 1.4.2 CREATE the CLASS for CREATE(New)
 class GuitarCreate(CreateView):
     model = Guitar
@@ -57,3 +65,5 @@ class GuitarUpdate(UpdateView):
 class GuitarDelete(DeleteView):
     model = Guitar
     success_url = '/guitars'
+
+    

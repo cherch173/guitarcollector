@@ -72,17 +72,17 @@
   </div>
   <div class="col s6">
     <br>
-    <form method="POST">
+    <form action="{% url 'add_use' guitar.id %}" method="POST">
         {% csrf_token %}
         {{ using_form.as_p }}
-        <input type="submit" class="btn" value="Add Feeding" />
+        <input type="submit" class="btn" value="Add Use" />
     </form>
     <br>
     <table class="teal lighten-3 striped">
         <thead>
             <tr>
                 <th>Date</th>
-                <th>Meal</th>
+                <th>Use</th>
             </tr>
         </thead>
 
