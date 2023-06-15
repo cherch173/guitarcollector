@@ -44,9 +44,9 @@ def guitars_detail(request, guitar_id):
 def add_use(request, guitar_id):
     form = UsingForm(request.POST)
     if form.is_valid():
-        new_using = form.save(commit=False)
-        new_using.guitar_id = guitar_id
-        new_using.save()
+        new_use = form.save(commit=False)
+        new_use.guitar_id = guitar_id
+        new_use.save()
     return redirect('detail', guitar_id=guitar_id)
 
 # LAB pt 3 (CBVs) - Part 1.4.2 CREATE the CLASS for CREATE(New)

@@ -21,7 +21,7 @@ path('guitars/<int:pk>/update', views.GuitarUpdate.as_view(), name='guitars_upda
 # Step 2.1.2 Define the ROUTE for DELETE
 path('guitars/<int:pk>/delete', views.GuitarDelete.as_view(), name='guitars_delete'),
 # Defne the ROUTE for ADD USE
-path('guitars/<int:pk>/add_use', views.add_use, name='add_use'),
+path('guitars/<int:guitar_id>/add_use', views.add_use, name='add_use'),
 ]
 
 # Step 8.2 touch main_app/templates/base.html
