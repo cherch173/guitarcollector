@@ -2,6 +2,7 @@ from django.db import models
 
 # Lab pt 3 (CBVs) Part 1.6 Import Reverse
 from django.urls import reverse
+from datetime import date
 
 # LAB pt 4 (OtM) Add USES Tuple in Tuple
 USES = (
@@ -22,6 +23,8 @@ class Guitar(models.Model):
     played = models.TextField(max_length=371)
     for_sale = models.BooleanField(default=True)
     price = models.DecimalField(default=0000.00, decimal_places=2, max_digits=10)
+    def use_for_today(self):
+        return self.using_set.filter(date=date.today()).count() >= len(USES)
 
 # VID 2 (Models) Step 6.0 MIGRATIONS
 # make MIGRATIONS to update the database with your new MODEL
@@ -148,3 +151,6 @@ class Using(models.Model):
 
     def __str__(self):
         return f"{self.get_use_display()} on {self.date}"
+    
+    class Meta:
+        ordering = ['-date']

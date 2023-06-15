@@ -78,6 +78,15 @@
         <input type="submit" class="btn" value="Add Use" />
     </form>
     <br>
+    {% if guitar.use_for_today %}
+    <div class="card-panel teal-text center-align">
+        {{guitar.name}} has melted faces today
+    </div>
+    {% else %}
+    <div class="card-panel indigo-text center-align">
+        {{ guitar.name }} may be lonely...
+    </div>
+    {% endif %}
     <table class="teal lighten-3 striped">
         <thead>
             <tr>
